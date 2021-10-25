@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework:spring-webmvc:5.3.12'
+    compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+
+    implementation 'io.springfox:springfox-swagger2:3.0.0'
+    implementation 'io.springfox:springfox-swagger-ui:3.0.0'
+}
+
+test {
+    useJUnitPlatform()
+}
